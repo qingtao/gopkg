@@ -54,3 +54,9 @@ location / {
 		proxy_set_header Host $http_host;
 	}
 ```
+
+### 本机hosts
+
+```
+127.0.0.1 code.local
+```
