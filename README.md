@@ -45,3 +45,12 @@ go run . -backend https://172.16.18.33 -frontend http://code.local -addr :8081 -
 - ":8081"是本命令行监听地址
 - "https://172.16.18.33"是真正的后端Git服务
 - debug打印反向代理的url转换日志
+
+### nginx 代理
+
+```
+location / {
+		proxy_pass http://localhost:8081/;
+		proxy_set_header Host $http_host;
+	}
+```
